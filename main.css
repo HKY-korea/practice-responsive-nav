@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #263343;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  background-color: gray;
+  border-radius: 5px;
+}
+
+button {
+  border: transparent;
+  background: transparent;
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav_logo {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.nav_logo > .fa-accusoft {
+  color: green;
+}
+
+.nav_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.nav_menu > li {
+  padding: 8px 12px;
+}
+
+.nav_links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100px;
+}
+
+.nav_toggleBtn {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 32px;
+  font-size: 24px;
+  color: green;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav_logo {
+    align-self: start;
+    padding: 8px 12px;
+  }
+  .nav_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav_links {
+    display: none;
+    padding: 8px;
+  }
+  .nav_toggleBtn {
+    display: block;
+  }
+
+  .nav_menu.active,
+  .nav_links.active {
+    display: flex;
+  }
+}
